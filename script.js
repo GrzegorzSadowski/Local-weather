@@ -19,7 +19,7 @@ function geoFindMe() {
       
       output.innerHTML = "";
       output.append(img);
-      getWeather(lat,lon); 
+     // getWeather(lat,lon); 
    };
 
   function error() {
