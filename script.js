@@ -2,9 +2,10 @@ var lat;
 var lon;
 var fahrenheit;
 var img = new Image();
+var output = document.getElementById("out");
 
 function geoFindMe() {
-  var output = document.getElementById("out");
+  
 
    if (!navigator.geolocation){
    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
