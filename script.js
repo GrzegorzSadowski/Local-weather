@@ -15,11 +15,9 @@ function geoFindMe() {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
       output.innerHTML=""
-      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false";
-      
-      output.innerHTML = '<img src="https://maps.googleapis.com/maps/api/staticmap?center=" + lat+ "," + lon + "&zoom=13&size=250x250&sensor=false">';;
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false"
       output.append(img);
-     // getWeather(lat,lon); 
+      getWeather(lat,lon); 
    };
 
   function error() {
