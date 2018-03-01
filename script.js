@@ -1,6 +1,7 @@
 var lat;
 var lon;
-var fahrenheit; 
+var fahrenheit;
+var img = new Image();
 
 function geoFindMe() {
   var output = document.getElementById("out");
@@ -13,13 +14,12 @@ function geoFindMe() {
   function success(position) {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
-      var img = new Image();
-      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false";
-      getWeather(lat,lon); 
-      output.innerHTML = "";
-     
-      output.append(img);
       
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false";
+      
+      output.innerHTML = "";
+      output.append(img);
+      getWeather(lat,lon); 
    };
 
   function error() {
