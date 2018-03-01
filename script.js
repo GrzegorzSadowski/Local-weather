@@ -13,8 +13,8 @@ function geoFindMe() {
    };
 
   function success(position) {
-      var lat = position.coords.latitude;
-      var lon = position.coords.longitude;
+      var lat = position.coords.latitude.toFixed(3);
+      var lon = position.coords.longitude.toFixed(3);
       output.innerHTML=""
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false"
      getWeather(lat,lon);
