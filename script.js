@@ -18,7 +18,7 @@ function geoFindMe() {
       output.innerHTML=""
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false"
       //output.append(img);
-      output.innerHTML="img"
+      output.innerHTML="<img>"
       getWeather(lat,lon); 
    };
 
