@@ -13,10 +13,11 @@ function geoFindMe() {
   function success(position) {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
-      getWeather(lat,lon); 
-      output.innerHTML = "";
       var img = new Image();
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=250x250&sensor=false";
+      getWeather(lat,lon); 
+      output.innerHTML = "";
+     
       output.append(img);
       
    };
