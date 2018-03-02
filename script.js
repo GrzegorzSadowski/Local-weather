@@ -19,7 +19,7 @@ function geoFindMe() {
       var lat = position.coords.latitude.toFixed(3);
       var lon = position.coords.longitude.toFixed(3);
       output.innerHTML=""
-      img.src = 'https://maps.googleapis.com/maps/api/staticmap?center='+lat+','+lon+'%26'+'zoom=13+'%26'+size=250x250+'%26'+key=AIzaSyBsU_T-MjanJ0gwUK04Lo1_2zyuzzE2aHQ';
+      img.src = 'https://maps.googleapis.com/maps/api/staticmap?center='+lat+','+lon+'%26'+'zoom=13'+'%26'+'size=250x250'+'%26'+'key=AIzaSyBsU_T-MjanJ0gwUK04Lo1_2zyuzzE2aHQ';
     
       output.append(img);
       getWeather(lat,lon);
