@@ -25,7 +25,7 @@ function geoFindMe() {
           center: {lat: lat, lng: lon},
           zoom: 13
         });
-
+      }
     
        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
     
