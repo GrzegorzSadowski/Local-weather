@@ -3,6 +3,7 @@ var lon;
 var fahrenheit;
 var img = new Image();
 var output = document.getElementById("out");
+var map;
 
 
 
