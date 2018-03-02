@@ -27,7 +27,7 @@ function geoFindMe() {
         });
       }
     
-       src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+       src="https://maps.googleapis.com/maps/api/js?callback=initMap"
     
       //output.append(img);
       getWeather(lat,lon);
