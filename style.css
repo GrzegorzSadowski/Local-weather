@@ -4,9 +4,8 @@
  }
 
   
-#out{
-max-height=250px;
-max-width:250px; 
+#map{
+height: 100%;
 }
 
 .a{
@@ -32,3 +31,4 @@ height: 75px;
     .large {
         display:none;
 }
+g
