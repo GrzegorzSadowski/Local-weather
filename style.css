@@ -3,6 +3,15 @@
     !important;
  }
 
+#out{
+  max-height: 250px;
+  max-width: 250px;
+  }
+  
+
+
+}
+
 .a{
   background-color: #adad85;
   margin-top:2rem;
