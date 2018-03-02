@@ -2,7 +2,7 @@ var lat;
 var lon;
 var fahrenheit;
 var img = new Image();
-var map = document.getElementById("map");
+var output = document.getElementById("out");
 
 
 
@@ -10,14 +10,14 @@ function geoFindMe() {
   
 
    if (!navigator.geolocation){
-   map.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+   output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
    return;
    };
 
   function success(position) {
       var lat = position.coords.latitude.toFixed(3);
       var lon = position.coords.longitude.toFixed(3);
-      map.innerHTML=""
+      output.innerHTML=""
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&"+"zoom=13"+"&"+"size=250x250";
     
       function initMap() {
@@ -34,10 +34,10 @@ function geoFindMe() {
    };
 
   function error() {
-     map.innerHTML = "Unable to retrieve your location";
+     output.innerHTML = "Unable to retrieve your location";
    };
   
-  map.innerHTML = "<p>Locating…</p>";
+  output.innerHTML = "<p>Locating…</p>";
   navigator.geolocation.getCurrentPosition(success, error);
 };
 
