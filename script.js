@@ -23,7 +23,7 @@ function geoFindMe() {
     
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 21, lng: 51},
+          center: {lat: 51, lng: 21},
           zoom: 13
         });
       }
