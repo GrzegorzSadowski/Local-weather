@@ -2,26 +2,26 @@ var lat;
 var lon;
 var fahrenheit;
 var img = new Image();
-var output = document.getElementById("out");
-var map;
+var map = document.getElementById("map");
+
 
 
 function geoFindMe() {
   
 
    if (!navigator.geolocation){
-   output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+   map.innerHTML = "<p>Geolocation is not supported by your browser</p>";
    return;
    };
 
   function success(position) {
       var lat = position.coords.latitude.toFixed(3);
       var lon = position.coords.longitude.toFixed(3);
-      output.innerHTML=""
+      map.innerHTML=""
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&"+"zoom=13"+"&"+"size=250x250";
     
       function initMap() {
-        map = new google.maps.Map(document.getElementById('out'), {
+        map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: lat, lng: lon},
           zoom: 13
         });
@@ -34,10 +34,10 @@ function geoFindMe() {
    };
 
   function error() {
-    output.innerHTML = "Unable to retrieve your location";
+     map.innerHTML = "Unable to retrieve your location";
    };
   
-  output.innerHTML = "<p>Locating…</p>";
+  map.innerHTML = "<p>Locating…</p>";
   navigator.geolocation.getCurrentPosition(success, error);
 };
 
