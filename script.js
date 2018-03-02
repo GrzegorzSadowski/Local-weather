@@ -20,8 +20,9 @@ function geoFindMe() {
       var lon = position.coords.longitude.toFixed(3);
       output.innerHTML=""
       img.src = 'https://maps.googleapis.com/maps/api/staticmap?center='+lat+','+lon+'&zoom=13&size=250x250&key=AIzaSyBsU_T-MjanJ0gwUK04Lo1_2zyuzzE2aHQ';
-      getWeather(lat,lon);
-      output.append(img);
+      output.append(img);  
+      getWeather(lat,lon);  
+      
    };
 
   function error() {
