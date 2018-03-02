@@ -3,7 +3,7 @@ var lon;
 var fahrenheit;
 var img = new Image();
 var output = document.getElementById("out");
-var map;
+
 
 
 
@@ -21,16 +21,7 @@ function geoFindMe() {
       output.innerHTML=""
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&"+"zoom=13"+"&"+"size=250x250";
     
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 51, lng: 21},
-          zoom: 13
-        });
-      }
-    
-     
-    
-      //output.append(img);
+      output.append(img);
       getWeather(lat,lon);
    };
 
